@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b18">
+  <title>WebGenius AI — Build your next website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="WebGenius AI home"><span class="brand-mark">✦</span><span>WebGenius</span><b>AI</b></a>
+    <div class="top-right"><span class="status-dot"></span><span>AI WEBSITE STUDIO</span><span class="badge">BETA</span></div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow"><span>✧</span> YOUR IDEA IS THE BLUEPRINT</div>
+      <h1>Imagine it.<br><span>Generate it.</span></h1>
+      <p class="lead">Turn a simple prompt into a polished website. No blank canvas. Just possibilities.</p>
+      <div class="benefits"><span>✦ Responsive by design</span><span>✦ Instant live preview</span><span>✦ Downloadable HTML</span></div>
+    </section>
+
+    <section class="workspace" aria-label="Website generator">
+      <div class="builder panel">
+        <div class="section-heading">
+          <div><div class="step">01 / THE BRIEF</div><h2>What are we creating?</h2></div>
+          <div class="heading-icon">✧</div>
+        </div>
+        <label for="prompt">DESCRIBE YOUR WEBSITE</label>
+        <textarea id="prompt" maxlength="1200" rows="5" placeholder="Example: A premium portfolio for a UI designer, with a bold hero, selected projects, skills, about section and contact details..."></textarea>
+        <div class="prompt-meta"><span>Tip: mention sections, colors and audience.</span><span id="charCount">0 / 1200</span></div>
+        <div class="field-row">
+          <div class="field"><label for="siteType">WEBSITE CATEGORY</label><select id="siteType"><option value="portfolio">Personal portfolio</option><option value="business">Business website</option><option value="landing">Landing page</option><option value="restaurant">Restaurant</option><option value="education">Education</option><option value="ecommerce">E-commerce demo</option></select></div>
+          <div class="field"><label for="theme">VISUAL DIRECTION</label><select id="theme"><option value="dark">Dark & futuristic</option><option value="light">Clean & minimal</option><option value="colorful">Bold & colorful</option></select></div>
+        </div>
+        <button id="generateBtn" class="generate-btn"><span class="btn-spark">✦</span><span class="btn-label">Generate website</span><span class="arrow">↗</span></button>
+        <div class="status-line"><span class="status-pulse"></span><p class="hint" id="status" role="status" aria-live="polite">Ready when you are. Describe your idea to begin.</p></div>
+        <div class="examples"><span class="try-label">QUICK START</span><button data-prompt="Create a professional portfolio for a Python developer with a bold hero, skills, featured projects, about section and contact details.">Developer portfolio <span>↗</span></button><button data-prompt="Create a premium cafe website with menu cards, opening hours, location and a reservation call to action.">Cafe website <span>↗</span></button><button data-prompt="Create a modern online course landing page with course cards, student testimonials and a strong enrollment call to action.">Course landing page <span>↗</span></button></div>
+      </div>
+
+      <section class="preview panel" aria-label="Generated website preview">
+        <div class="preview-heading">
+          <div><div class="step">02 / THE RESULT</div><h2>Your canvas</h2></div>
+          <div class="preview-actions"><button id="refreshBtn" class="icon-btn" title="Refresh preview" aria-label="Refresh preview">↻</button><button id="downloadBtn" class="download-btn" disabled>↓ <span>Download HTML</span></button></div>
+        </div>
+        <div class="preview-frame">
+          <div class="browser-bar"><div class="browser-dots"><i></i><i></i><i></i></div><div class="address">your-website.preview</div><span class="live-label"><i></i> LIVE</span></div>
+          <iframe id="preview" title="Generated website preview" sandbox="allow-scripts allow-forms"></iframe>
+          <div id="emptyState" class="empty-state"><div class="empty-art"><span>✦</span><span>✧</span><span>✦</span></div><h3>Your next big idea starts here</h3><p>Your generated website will appear in this window.</p><div class="empty-chips"><span>HTML</span><span>CSS</span><span>Responsive</span></div></div>
+        </div>
+        <p class="preview-note"><span>ⓘ</span> Preview is sandboxed. Review generated code before publishing.</p>
+      </section>
+    </section>
+    <footer><span class="footer-brand">✦ WEBGENIUS AI</span><span>Made for ideas that deserve to exist.</span></footer>
+  </main>
+  <script src="/script.js"></script>
+</body>
+</html>
